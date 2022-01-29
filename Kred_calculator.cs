@@ -1361,7 +1361,10 @@ namespace Kred_calc
         // INI файл
         private void Button3_Click(System.Object sender, System.EventArgs e)
 		{
-			Process.Start(file_path_ini_mas[this.type_rasch.SelectedIndex]);
+            Process p = new();
+            p.StartInfo.UseShellExecute = true;
+            p.StartInfo.FileName = file_path_ini_mas[this.type_rasch.SelectedIndex];
+            p.Start();
 		}
 
         // Перезаполнить
