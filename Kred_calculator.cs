@@ -546,7 +546,7 @@ namespace Kred_calc
         public void Rashet_formula(string type_rashet, string type_annuitet)
 		{
 
-			int i = 0;
+			int i;
 			this.DataGridView1.Rows.Clear();
 			double sum_kred = Prov_numeric(this.sum_kred.Text);
 			double proc_stavka = Prov_numeric(this.proc_stavka.Text);            
@@ -639,7 +639,7 @@ namespace Kred_calc
                     for (i = 1; i <= srok; i++)
                     {
                         // учет ежегодных
-                        double sum_year = 0;
+                        double sum_year;
                         sum_year = 0;
                         if ((i - 1) % 12 == 0 && i != 1)
                         {
@@ -700,7 +700,7 @@ namespace Kred_calc
                     for (i = 1; i <= priv_srok; i++)
                     {
                         // учет ежегодных
-                        double sum_year = 0;
+                        double sum_year;
                         sum_year = 0;
                         if ((i - 1) % 12 == 0 && i != 1)
                         {
@@ -742,7 +742,7 @@ namespace Kred_calc
                     for (i = 1; i <= srok; i++)
                     {
                         // учет ежегодных
-                        double sum_year = 0;
+                        double sum_year;
                         sum_year = 0;
                         if ((i - 1) % 12 == 0 && i != 1)
                         {
@@ -789,7 +789,7 @@ namespace Kred_calc
 				double n_ob = 0;
                 double n_cred = 0;
                 double n_perepl = 0;
-                double sum_year = 0;
+                double sum_year;
                 double pr;
                 double summ_dop = 0;
                 double sum_plat = Prov_numeric(this.sum_plat.Text);
@@ -798,7 +798,7 @@ namespace Kred_calc
                 double zc = 0;
                 double zn = 0;
                 double sum_pereplata = 0;
-                int srok_new = 0;
+                int srok_new;
 
                 // платежи кредит
                 DateTime d_date = this.date_cred.Value;
@@ -828,7 +828,7 @@ namespace Kred_calc
 					sum_year = 0;
 					if ((i - 1) % 12 == 0 && i != 1)
 					{
-                        sum_year = sum_year = Dop_plat_in_year(summ_graf.ToString());
+                        sum_year = Dop_plat_in_year(summ_graf.ToString());
                         //sum_year = p_sum_year;
                     }
                     // учет ежемесяных
@@ -942,14 +942,14 @@ namespace Kred_calc
                 double n_ob = 0;
                 double n_cred = 0;
                 double n_perepl = 0;
-                double sum_year = 0;
+                double sum_year;
                 double pr;
                 double summ_dop = 0;
                 double sum_plat = Prov_numeric(this.sum_plat.Text);
                 string[] mass_date = new string[srok];
                 double[,] mass_num = new double[6, srok];
                 double sum_pereplata = 0;
-                int srok_new = 0;
+                int srok_new;
                 double kurs_start = Prov_numeric(this.kurs_start.Text);
                 double kurs_year_0 = Prov_numeric(this.kurs_year_0.Text);
                 double kurs_year_1 = Prov_numeric(this.kurs_year_1.Text);
@@ -986,7 +986,7 @@ namespace Kred_calc
                     sum_year = 0;
                     if ((i - 1) % 12 == 0 && i != 1)
                     {
-                        sum_year = sum_year = Dop_plat_in_year(summ_graf.ToString());
+                        sum_year = Dop_plat_in_year(summ_graf.ToString());
                         //sum_year = p_sum_year;
                     }
                     // учет ежемесяных
