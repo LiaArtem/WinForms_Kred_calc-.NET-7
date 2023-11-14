@@ -21,10 +21,10 @@ namespace Kred_calc
 		}
 
 		static int typ;
-		static string[] file_path_ini_mas = Array.Empty<string>();
-		static string[] type_ini_mas = Array.Empty<string>();
-        public List<string> curr_code_date = new();
-        public List<string> curr_code_val = new();
+		static string[] file_path_ini_mas = [];
+		static string[] type_ini_mas = [];
+        public List<string> curr_code_date = [];
+        public List<string> curr_code_val = [];
         static double p_sum_year;
         static Boolean p_is_year;
         static double p_sum_month;
@@ -482,7 +482,7 @@ namespace Kred_calc
             {
                 HeaderText = "Дата (мес./год)",
                 ReadOnly = true,
-                Width = 70
+                Width = 80
             };
             this.DataGridView1.Columns.Add(com1);
             //
@@ -490,7 +490,7 @@ namespace Kred_calc
             {
                 HeaderText = "Задолжность по кредиту",
                 ReadOnly = true,
-                Width = 80
+                Width = 100
             };
             this.DataGridView1.Columns.Add(com2);
             //
@@ -498,7 +498,7 @@ namespace Kred_calc
             {
                 HeaderText = "Платеж по процентам",
                 ReadOnly = true,
-                Width = 80
+                Width = 90
             };
             this.DataGridView1.Columns.Add(com3);
             //
@@ -506,7 +506,7 @@ namespace Kred_calc
             {
                 HeaderText = "Платежи, кредит",
                 ReadOnly = true,
-                Width = 80
+                Width = 90
             };
             this.DataGridView1.Columns.Add(com4);
             //
@@ -514,7 +514,7 @@ namespace Kred_calc
             {
                 HeaderText = "Переплата",
                 ReadOnly = true,
-                Width = 80
+                Width = 90
             };
             this.DataGridView1.Columns.Add(com5);
             //
@@ -522,7 +522,7 @@ namespace Kred_calc
             {
                 HeaderText = "Платежи, дополн.",
                 ReadOnly = true,
-                Width = 80
+                Width = 90
             };
             this.DataGridView1.Columns.Add(com6);
             //
@@ -530,7 +530,7 @@ namespace Kred_calc
             {
                 HeaderText = "Общий платеж",
                 ReadOnly = true,
-                Width = 80
+                Width = 90
             };
 			this.DataGridView1.Columns.Add(com7);
 
